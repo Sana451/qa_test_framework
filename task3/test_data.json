@@ -1,0 +1,19 @@
+{
+  "main_page_url": "https://demoqa.com",
+  "user_1": {
+    "first_name": "Jon",
+    "last_name": "Snow",
+    "email": "lnownothing@gmail.com",
+    "age": 30,
+    "salary": 3000,
+    "department": "alpha"
+  },
+  "user_2": {
+    "first_name": "Buttercup",
+    "last_name": "Cambersnatch",
+    "email": "cambersnatch@mail.ru",
+    "age": 41,
+    "salary": 2000,
+    "department": "beta"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "chrome_options": [
+    "--incognito"
+  ],
+  "firefox_options": [
+    "--private"
+  ],
+  "default_timeout": 10,
+  "log_level": "info",
+  "main_page_url": "https://demoqa.com"
+}
