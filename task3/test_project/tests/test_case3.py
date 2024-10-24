@@ -1,8 +1,8 @@
 import pytest
 
-from ...config import settings
-from ..pages.main_page import MainPage
-from ...framework.logger import MyLogger
+from task3.config import settings
+from task3.test_project.pages.main_page import MainPage
+from task3.framework.logger import MyLogger
 
 log = MyLogger.__call__().get_logger()
 

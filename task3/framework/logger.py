@@ -2,8 +2,8 @@ import logging
 import os
 import datetime
 
-from ..config import settings
-from .singleton import Singleton
+from task3.config import settings
+from task3.framework.singleton import Singleton
 
 
 class MyLogger(object, metaclass=Singleton):

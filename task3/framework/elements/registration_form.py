@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
-from .base_element import BaseElement
-from ..logger import MyLogger
+from task3.framework.elements.base_element import BaseElement
+from task3.framework.logger import MyLogger
 
 
 class RegistrationForm(BaseElement):

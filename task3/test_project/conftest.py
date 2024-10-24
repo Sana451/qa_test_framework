@@ -1,6 +1,6 @@
 import pytest
 
-from ..framework.browser import Driver
+from task3.framework.browser import Driver
 
 
 @pytest.fixture(autouse=True)

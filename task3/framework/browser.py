@@ -1,8 +1,8 @@
 from selenium.common import NoAlertPresentException
 
-from .singleton import Singleton
-from .browser_factory import BrowserFactory
-from .logger import MyLogger
+from task3.framework.singleton import Singleton
+from task3.framework.browser_factory import BrowserFactory
+from task3.framework.logger import MyLogger
 
 
 class Driver(metaclass=Singleton):

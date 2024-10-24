@@ -2,9 +2,9 @@ from selenium.common import TimeoutException, ElementNotInteractableException, E
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from ...config import settings
-from ..browser import Driver
-from ..logger import MyLogger
+from task3.config import settings
+from task3.framework.browser import Driver
+from task3.framework.logger import MyLogger
 
 
 class BaseElement:

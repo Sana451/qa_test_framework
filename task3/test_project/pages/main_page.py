@@ -1,8 +1,8 @@
 from selenium.webdriver.common.by import By
 
-from ...framework.base_page import BasePage
-from ...framework.elements.registration_form import RegistrationForm
-from ...framework.logger import MyLogger
+from task3.framework.base_page import BasePage
+from task3.framework.elements.registration_form import RegistrationForm
+from task3.framework.logger import MyLogger
 
 
 class MainPage(BasePage):

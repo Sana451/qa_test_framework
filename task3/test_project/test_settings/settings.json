@@ -1,0 +1,9 @@
+{
+  "chrome_name": "chrome",
+  "chrome_incognito": "--incognito",
+  "firefox_name": "firefox",
+  "firefox_private":"--private",
+  "default_timeout": 60,
+  "log_level": "debug",
+  "main_page_url": "https://demoqa.com"
+}
