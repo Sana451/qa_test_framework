@@ -1,46 +1,45 @@
+import pytest
+
 from task3.config import settings
 from task3.test_project.pages.main_page import MainPage
-from task3.framework.test_tools.test_tools import gen_random_string
-from task3.framework.logger import MyLogger
+from task3.framework.test_tools.test_tools import GenRandomString
+from task3.framework.logger import Logger
 
-log = MyLogger.__call__().get_logger()
+log = Logger.__call__().get_logger()
 
 
+@pytest.mark.usefixtures("get_browser_fixture")
 class TestCase1Alerts:
     def test_case_1_alerts(self):
-        log.info("Testcase 1. Alerts")
-        log.info("Шаг 1. Перейти на главную страницу")
-        m_p = MainPage()
-        m_p.open_page(settings["main_page_url"])
-        assert m_p.page_opened(), "Страница не открыта"
+        log.info("\n>>>Запуск Testcase 1. Alerts<<<")
+        main_page = MainPage()
+        main_page.open_page(settings["main_page_url"])
+        assert main_page.check_page_opened(), "Страница не открыта"
 
-        log.info("Шаг 2. Кликнуть на кнопку Alerts, Frame & Windows")
-        m_p.click_alerts_frame_and_windows_btn()
-        m_p.click_alerts_btn()
-        assert m_p.alerts_form_on_page(), "На странице не появилась форма Alerts"
+        main_page.click_alerts_frame_and_windows_btn()
+        main_page.click_alerts_btn()
+        assert main_page.alerts_form_on_page(), "На странице не появилась форма Alerts"
 
-        log.info("Шаг 3. Нажать на кнопку Click Button to see alert")
-        m_p.click_alert_btn_click_me()
-        assert m_p.get_alert_text() == "You clicked a button", "Alert с текстом 'You clicked...' не открыт"
+        main_page.click_alert_btn_click_me()
+        assert main_page.get_alert_text() == settings["alert_btn_click_me_text"], \
+            f"Alert с текстом {settings['alert_btn_click_me_text']} не открылся"
 
-        log.info("Шаг 4. Нажать на кнопку OK (закрыть alert)")
-        m_p.accept_alert()
-        assert m_p.check_alert_closed(), "Alert не закрылся"
+        main_page.accept_alert()
+        assert main_page.check_alert_closed(), "Alert не закрылся"
 
-        log.info("Шаг 5. Нажать на кнопку On button click, confirm box will appear")
-        m_p.click_alert_btn_confirm_box()
-        assert m_p.get_alert_text() == "Do you confirm action?", "Alert с текстом 'Do you confirm...' не открыт"
+        main_page.click_alert_btn_confirm_box()
+        assert main_page.get_alert_text() == settings["alert_confirm_text"], \
+            f"Alert с текстом {settings['alert_confirm_text']} не открылся"
 
-        log.info("Шаг 6. Нажать на кнопку OK (закрыть alert)")
-        m_p.accept_alert()
-        assert m_p.check_alert_closed() is True, "Alert не закрылся"
+        main_page.accept_alert()
+        assert main_page.check_alert_closed() is True, "Alert не закрылся"
 
-        log.info("Шаг 7. Нажать на кнопку On button click, prompt box will appear")
-        m_p.click_alert_btn_prompt_box()
-        assert m_p.get_alert_text() == "Please enter your name"
+        main_page.click_alert_btn_prompt_box()
+        assert main_page.get_alert_text() == settings["alert_btn_prompt_box_text"], \
+            f"Alert с текстом {settings['alert_btn_prompt_box_text']} не открылся"
 
-        log.info("Шаг 8. Ввести случайно сгенерированный текст, нажать на кнопку ок (закрыть alert)")
-        m_p.send_keys_to_prompt_box(random_string := gen_random_string(10))
-        m_p.accept_alert()
-        assert m_p.check_alert_closed() is True, "Alert не закрылся"
-        assert random_string in m_p.get_prompt_result_text(), "Текст не соответствует введённому в prompt"
+        random_string = GenRandomString.gen_by_len(10)
+        main_page.send_text_to_prompt_box(random_string)
+        main_page.accept_alert()
+        assert main_page.check_alert_closed() is True, "Alert не закрылся"
+        assert random_string in main_page.get_prompt_result_text(), "Текст не соответствует введённому в prompt"

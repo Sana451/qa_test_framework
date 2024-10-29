@@ -1,9 +1,21 @@
 {
+  "browser_name": "chrome",
   "chrome_name": "chrome",
   "chrome_incognito": "--incognito",
   "firefox_name": "firefox",
   "firefox_private":"--private",
   "default_timeout": 60,
+  "main_page_url": "https://demoqa.com",
   "log_level": "debug",
-  "main_page_url": "https://demoqa.com"
+  "log_level_info": "info",
+  "log_level_debug": "debug",
+  "log_level_warning": "warning",
+  "log_level_error": "error",
+  "log_dir_name": "./log",
+  "log_filename_prefix": "/log_",
+  "log_file_extension":  ".log",
+  "log_date_format": "%H:%M:%S",
+  "log_time_format": "%Y-%m-%d",
+  "log_mode": "w",
+  "log_msg_format": "%(asctime)s | [%(levelname)s | %(filename)s:%(lineno)s] > %(message)s"
 }
