@@ -15,8 +15,11 @@ class Driver(metaclass=Singleton):
 
     def get_driver(self):
         if self.__driver is None:
-            self.__driver = BrowserFactory().get_webdriver_instance(settings["browser_name"])
-            return self.__driver
+            try:
+                self.__driver = BrowserFactory().get_webdriver_instance(settings["browser_name"])
+                return self.__driver
+            except Exception:
+                print("Ошибка инициализации экземпляра драйвера (Driver.get_driver)")
         return self.__driver
 
     def del_driver(self):

@@ -6,8 +6,9 @@ from task3.config import settings
 
 @pytest.fixture(autouse=True)
 def get_browser_fixture():
-    Driver().get_driver()
-    yield
+    driver = Driver().get_driver()
+    driver.get(settings["main_page_url"])
+    yield driver
     Driver().del_driver()
 
 

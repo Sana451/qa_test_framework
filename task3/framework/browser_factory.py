@@ -10,7 +10,7 @@ class BrowserFactory:
             driver = webdriver.Chrome(options=self.get_chrome_options())
 
         elif browser_name == settings["firefox_name"]:
-            driver = webdriver.Firefox(options=self.get_firefox_options())
+            driver = webdriver.Firefox(options=BrowserFactory.get_firefox_options())
 
         else:
             raise Exception("Имя браузера указано неверно"
