@@ -1,9 +1,9 @@
 from selenium.common import NoAlertPresentException
 
-from task3.framework.singleton import Singleton
-from task3.framework.browser_factory import BrowserFactory
-from task3.framework.logger import Logger
-from task3.config import settings
+from qa_test_framework.framework.singleton import Singleton
+from qa_test_framework.framework.browser_factory import BrowserFactory
+from qa_test_framework.framework.logger import Logger
+from qa_test_framework.config import settings
 
 log = Logger.__call__().get_logger()
 

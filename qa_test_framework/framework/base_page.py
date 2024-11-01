@@ -1,5 +1,5 @@
-from task3.framework.browser import Driver
-from task3.framework.logger import Logger
+from qa_test_framework.framework.browser import Driver
+from qa_test_framework.framework.logger import Logger
 
 log = Logger.__call__().get_logger()
 

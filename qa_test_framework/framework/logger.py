@@ -2,8 +2,8 @@ import logging
 import os
 import datetime
 
-from task3.config import settings
-from task3.framework.singleton import Singleton
+from qa_test_framework.config import settings
+from qa_test_framework.framework.singleton import Singleton
 
 
 class Logger(metaclass=Singleton):

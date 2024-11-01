@@ -1,4 +1,4 @@
-# Framework. Selenium WebDriver. Tools QA (ДЗ № 3)
+# Framework. Selenium WebDriver. Tools QA
 ## Проект по автоматизации тестирования сайта [https://demoqa.com/](https://demoqa.com/).
 Использованный стек технологий: 
 [Python](https://www.python.org/), 

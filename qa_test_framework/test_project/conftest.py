@@ -1,7 +1,7 @@
 import pytest
 
-from task3.framework.browser import Driver
-from task3.config import settings
+from qa_test_framework.framework.browser import Driver
+from qa_test_framework.config import settings
 
 
 @pytest.fixture(autouse=True)

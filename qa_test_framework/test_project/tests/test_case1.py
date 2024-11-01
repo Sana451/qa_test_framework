@@ -1,9 +1,9 @@
 import pytest
 
-from task3.config import settings
-from task3.test_project.pages.main_page import MainPage
-from task3.framework.test_tools.test_tools import GenRandomString
-from task3.framework.logger import Logger
+from qa_test_framework.config import settings
+from qa_test_framework.test_project.pages.main_page import MainPage
+from qa_test_framework.framework.test_tools.test_tools import GenRandomString
+from qa_test_framework.framework.logger import Logger
 
 log = Logger.__call__().get_logger()
 

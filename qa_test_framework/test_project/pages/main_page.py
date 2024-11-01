@@ -1,10 +1,10 @@
 from selenium.webdriver.common.by import By
 
-from task3.framework.base_page import BasePage
-from task3.framework.browser import Driver
-from task3.framework.elements.base_element import BaseElement
-from task3.test_project.forms.registration_form import RegistrationForm
-from task3.framework.logger import Logger
+from qa_test_framework.framework.base_page import BasePage
+from qa_test_framework.framework.browser import Driver
+from qa_test_framework.framework.elements.base_element import BaseElement
+from qa_test_framework.test_project.forms.registration_form import RegistrationForm
+from qa_test_framework.framework.logger import Logger
 
 log = Logger.__call__().get_logger()
 

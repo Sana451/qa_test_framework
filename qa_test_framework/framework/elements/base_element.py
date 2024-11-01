@@ -4,10 +4,10 @@ from selenium.common import (TimeoutException,
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from task3.config import settings
-from task3.framework.browser import Driver
-from task3.framework.logger import Logger
-from task3.framework.scripts import Script
+from qa_test_framework.config import settings
+from qa_test_framework.framework.browser import Driver
+from qa_test_framework.framework.logger import Logger
+from qa_test_framework.framework.scripts import Script
 
 log = Logger.__call__().get_logger()
 

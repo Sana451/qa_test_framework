@@ -1,6 +1,6 @@
 from selenium import webdriver
 
-from task3.config import settings
+from qa_test_framework.config import settings
 
 
 class BrowserFactory:
